@@ -35,10 +35,10 @@ begin
   FProximoId := 1;
 
   try
-    LCliente := TCliente.Create(ObterProximoId, 'João Silva', '12345678901', '(11) 9999-8888', 'joao@email.com');
+    LCliente := TCliente.Create(ObterProximoId, 'João Silva', '98524143053', '(11) 9999-8888', 'joao@email.com');
     Adicionar(LCliente);
 
-    LCliente := TCliente.Create(ObterProximoId, 'Maria Santos', '98765432100', '(11) 7777-6666', 'maria@email.com');
+    LCliente := TCliente.Create(ObterProximoId, 'Maria Santos', '85765754007', '(11) 7777-6666', 'maria@email.com');
     Adicionar(LCliente);
 
     LCliente := TCliente.Create(ObterProximoId, 'Empresa XYZ Ltda', '12345678000199', '(11) 5555-4444', 'contato@xyz.com');
