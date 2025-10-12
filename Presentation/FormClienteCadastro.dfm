@@ -12,43 +12,8 @@ object FormClienteCadastro: TFormClienteCadastro
   Font.Style = []
   Position = poDesigned
   OnCreate = FormCreate
+  OnDestroy = FormDestroy
   TextHeight = 13
-  object Panel1: TPanel
-    Left = 0
-    Top = 0
-    Width = 800
-    Height = 70
-    Align = alTop
-    TabOrder = 0
-    ExplicitWidth = 798
-    object btnNovo: TButton
-      Left = 16
-      Top = 20
-      Width = 75
-      Height = 25
-      Caption = 'Novo'
-      TabOrder = 0
-      OnClick = btnNovoClick
-    end
-    object btnSalvar: TButton
-      Left = 97
-      Top = 20
-      Width = 75
-      Height = 25
-      Caption = 'Salvar'
-      TabOrder = 1
-      OnClick = btnSalvarClick
-    end
-    object btnExcluir: TButton
-      Left = 178
-      Top = 20
-      Width = 75
-      Height = 25
-      Caption = 'Excluir'
-      TabOrder = 2
-      OnClick = btnExcluirClick
-    end
-  end
   object ListBox1: TListBox
     Left = 0
     Top = 280
@@ -56,7 +21,7 @@ object FormClienteCadastro: TFormClienteCadastro
     Height = 220
     Align = alBottom
     ItemHeight = 13
-    TabOrder = 1
+    TabOrder = 0
     OnClick = ListBox1Click
     ExplicitTop = 272
     ExplicitWidth = 798
@@ -67,9 +32,10 @@ object FormClienteCadastro: TFormClienteCadastro
     Width = 800
     Height = 210
     Align = alClient
-    TabOrder = 2
+    TabOrder = 1
+    ExplicitTop = 0
     ExplicitWidth = 798
-    ExplicitHeight = 202
+    ExplicitHeight = 272
     object Label1: TLabel
       Left = 24
       Top = 24
@@ -125,6 +91,44 @@ object FormClienteCadastro: TFormClienteCadastro
       Width = 400
       Height = 21
       TabOrder = 3
+    end
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 800
+    Height = 70
+    Align = alTop
+    TabOrder = 2
+    ExplicitLeft = 1
+    ExplicitTop = 1
+    ExplicitWidth = 798
+    object btnNovo: TButton
+      Left = 16
+      Top = 20
+      Width = 75
+      Height = 25
+      Caption = 'Novo'
+      TabOrder = 0
+      OnClick = btnNovoClick
+    end
+    object btnSalvar: TButton
+      Left = 97
+      Top = 20
+      Width = 75
+      Height = 25
+      Caption = 'Salvar'
+      TabOrder = 1
+      OnClick = btnSalvarClick
+    end
+    object btnExcluir: TButton
+      Left = 178
+      Top = 20
+      Width = 75
+      Height = 25
+      Caption = 'Excluir'
+      TabOrder = 2
+      OnClick = btnExcluirClick
     end
   end
 end

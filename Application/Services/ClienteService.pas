@@ -38,10 +38,8 @@ var
   LCliente: TCliente;
 begin
   try
-    ShowMessage('Criando cliente: ' + ANome); // Debug
     LCliente := TCliente.Create(FClienteRepository.ObterProximoId, ANome, ACPFCNPJ, ATelefone, AEmail);
     Result := FClienteRepository.Adicionar(LCliente);
-    ShowMessage('Cliente criado com ID: ' + IntToStr(Result.Id)); // Debug
   except
     on E: Exception do
     begin

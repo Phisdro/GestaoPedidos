@@ -102,9 +102,6 @@ begin
 
     FListaClientes := FClienteService.ListarClientes;
 
-    // DEBUG: Verifique se a lista tem itens
-    ShowMessage('Número de clientes carregados: ' + IntToStr(FListaClientes.Count));
-
     for LCliente in FListaClientes do
       ListBox1.Items.Add(Format('%d - %s (%s)', [LCliente.Id, LCliente.Nome, LCliente.CPFCNPJ]));
 
@@ -117,16 +114,11 @@ procedure TFormClienteCadastro.FormCreate(Sender: TObject);
 var
   LClienteRepository: TClienteRepositoryMemory;
 begin
-  ShowMessage('FormCreate - Iniciando...'); // Debug
 
   LClienteRepository := TClienteRepositoryMemory.Create;
   FClienteService := TClienteService.Create(LClienteRepository);
 
-  ShowMessage('FormCreate - Serviços criados, carregando clientes...'); // Debug
-
   CarregarClientes;
-
-  ShowMessage('FormCreate - Clientes carregados: ' + IntToStr(FListaClientes.Count)); // Debug
 end;
 
 

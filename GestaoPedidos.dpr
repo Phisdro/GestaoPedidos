@@ -18,3 +18,7 @@ begin
   Application.Run;
 end.
 
+Application.CreateForm(TFormClienteCadastro, FormClienteCadastro);
+
+Application.CreateForm(TFormClienteCadastro, FormClienteCadastro);
+
