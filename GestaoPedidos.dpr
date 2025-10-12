@@ -2,11 +2,11 @@ program GestaoPedidos;
 
 uses
   Vcl.Forms,
-  UCliente in 'Domain\Entities\UCliente.pas',
-  IClienteRepository in 'Domain\Interfaces\Repositories\IClienteRepository.pas',
-  IClienteService in 'Application\Interfaces\Services\IClienteService.pas',
-  ClienteService in 'Application\Services\ClienteService.pas',
-  ClienteRepositoryMemory in 'Infrastructure\Repositories\ClienteRepositoryMemory.pas',
+  UCliente in 'Domain\UCliente.pas',
+  IClienteRepository in 'Domain\IClienteRepository.pas',
+  IClienteService in 'Domain\IClienteService.pas',
+  ClienteService in 'Application\ClienteService.pas',
+  ClienteRepositoryMemory in 'Infrastructure\ClienteRepositoryMemory.pas',
   FormClienteCadastro in 'Presentation\FormClienteCadastro.pas';
 
 {$R *.res}

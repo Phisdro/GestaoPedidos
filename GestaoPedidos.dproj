@@ -126,11 +126,11 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="Domain\Entities\UCliente.pas"/>
-        <DCCReference Include="Domain\Interfaces\Repositories\IClienteRepository.pas"/>
-        <DCCReference Include="Application\Interfaces\Services\IClienteService.pas"/>
-        <DCCReference Include="Application\Services\ClienteService.pas"/>
-        <DCCReference Include="Infrastructure\Repositories\ClienteRepositoryMemory.pas"/>
+        <DCCReference Include="Domain\UCliente.pas"/>
+        <DCCReference Include="Domain\IClienteRepository.pas"/>
+        <DCCReference Include="Domain\IClienteService.pas"/>
+        <DCCReference Include="Application\ClienteService.pas"/>
+        <DCCReference Include="Infrastructure\ClienteRepositoryMemory.pas"/>
         <DCCReference Include="Presentation\FormClienteCadastro.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
