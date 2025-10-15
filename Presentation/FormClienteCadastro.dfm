@@ -14,7 +14,7 @@ object FormClienteCadastro: TFormClienteCadastro
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   TextHeight = 13
-  object ListBox1: TListBox
+  object ListBoxCadastroClientes: TListBox
     Left = 0
     Top = 280
     Width = 800
@@ -22,7 +22,7 @@ object FormClienteCadastro: TFormClienteCadastro
     Align = alBottom
     ItemHeight = 13
     TabOrder = 0
-    OnClick = ListBox1Click
+    OnClick = ListBoxCadastroClientesClick
     ExplicitTop = 272
     ExplicitWidth = 798
   end

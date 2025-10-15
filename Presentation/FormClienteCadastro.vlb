@@ -28,7 +28,7 @@ Coordinates=121,10,83,58
 [btnExcluir]
 Coordinates=351,144,71,58
 
-[ListBox1]
+[ListBoxCadastroClientes]
 Coordinates=10,10,101,124
 Visible=True
 

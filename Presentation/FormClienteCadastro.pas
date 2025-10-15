@@ -23,13 +23,13 @@ type
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
-    ListBox1: TListBox;
+    ListBoxCadastroClientes: TListBox;
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure btnNovoClick(Sender: TObject);
     procedure btnSalvarClick(Sender: TObject);
     procedure btnExcluirClick(Sender: TObject);
-    procedure ListBox1Click(Sender: TObject);
+    procedure ListBoxCadastroClientesClick(Sender: TObject);
   private
     FClienteService: IClienteServices;
     FClienteAtual: TCliente;
@@ -94,8 +94,8 @@ var
   LCliente: TCliente;
 begin
   try
-    ListBox1.Items.BeginUpdate;
-    ListBox1.Clear;
+    ListBoxCadastroClientes.Items.BeginUpdate;
+    ListBoxCadastroClientes.Clear;
 
     if Assigned(FListaClientes) then
       FListaClientes.Free;
@@ -103,10 +103,10 @@ begin
     FListaClientes := FClienteService.ListarClientes;
 
     for LCliente in FListaClientes do
-      ListBox1.Items.Add(Format('%d - %s (%s)', [LCliente.Id, LCliente.Nome, LCliente.CPFCNPJ]));
+      ListBoxCadastroClientes.Items.Add(Format('%d - %s (%s)', [LCliente.Id, LCliente.Nome, LCliente.CPFCNPJ]));
 
   finally
-    ListBox1.Items.EndUpdate;
+    ListBoxCadastroClientes.Items.EndUpdate;
   end;
 end;
 
@@ -128,11 +128,11 @@ begin
     FListaClientes.Free;
 end;
 
-procedure TFormClienteCadastro.ListBox1Click(Sender: TObject);
+procedure TFormClienteCadastro.ListBoxCadastroClientesClick(Sender: TObject);
 var
   LIndex: Integer;
 begin
-  LIndex := ListBox1.ItemIndex;
+  LIndex := ListBoxCadastroClientes.ItemIndex;
   if (LIndex >= 0) and (LIndex < FListaClientes.Count) then
   begin
     PreencherCampos(FListaClientes[LIndex]);
@@ -146,7 +146,7 @@ begin
   edtTelefone.Text := '';
   edtEmail.Text := '';
   FClienteAtual := nil;
-  ListBox1.ItemIndex := -1;
+  ListBoxCadastroClientes.ItemIndex := -1;
 end;
 
 procedure TFormClienteCadastro.PreencherCampos(const ACliente: TCliente);
